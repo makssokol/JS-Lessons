@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson2-5</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "sum":
+                    return sum(arg1, arg2);
+                    break;
+                case "extract":
+                    return extract(arg1, arg2);
+                    break;
+                case "multiply":
+                    return multiply(arg1, arg2);
+                    break;
+                case "divide":
+                    return divide(arg1, arg2);
+                    break;
+            }
+        }
+
+        function sum(a, b) {
+            let sum = a + b;
+            return sum;
+        };
+
+        function extract(a, b) {
+            let extract = a - b;
+            return extract;
+        };
+
+        function multiply(a, b) {
+            let multiply = a * b;
+            return multiply;
+        };
+
+        function divide(a, b) {
+            let divide = a / b;
+            return divide;
+        };
+            debugger;
+            let a = +prompt("Введите первое число: ");
+            let b = +prompt("Введите второе число: ");
+            let op = prompt("Введите действие (sum, extract, multiply или divide): ");
+            if (op != "sum" && op != "extract" && op != "multiply" && op != "divide") {
+                alert("Вы ввели некорректное действие");
+            } else {
+                alert(mathOperation(a, b, op))
+            }
+
+    </script>
+</body>
+
+</html>
